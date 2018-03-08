@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Mobile Ticket Viewer App</title>
+    {% assets "main.css" %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ ASSET_URL}}">
+    {% endassets %}
+
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        
+ 
+        <div class="jumbotron">
+            <h1>Mobile Ticket Viewer</h1>
+        </div>
+
+
+        {% if isTkt %}
+        <div>
+
+            {% for tk in Tkt %}
+            <div class="col tkt top-buffer thumbnail " onclick="location.href='{{ url_for('displayTicketwithID', ticket_id = tk['Id']) }}';" style="cursor: pointer;">
+                <h4 >{{tk['Subject']}}</h4>
+                <p align=justify>{{tk['Description']}}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+        {% endif %}
+
+        {% if not isTkt %}
+        <div class="alert alert-danger">
+            <strong>Oops!</strong> Error Occurred: {{Tkt[0].Error}}
+        </div>
+        {% endif %}
+
+        <footer class="footer">
+            <p>&copy; Company 2015</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

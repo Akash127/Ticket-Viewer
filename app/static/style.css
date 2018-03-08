@@ -1,0 +1,37 @@
+.tkt {
+	border-radius: 5px;
+    border: 2px solid #73AD21;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+.top-buffer{
+	margin-top: 10px;
+}
+
+.thumbnail:hover {
+background-color: #EEEEEE;
+
+}
+
+.jumbotron{
+	background-color: #2B3E50 !important;
+}
+
+.jumbotron h1{
+	color: white !important;
+	font: 40px Baskerville !important;
+}
+
+
+.table th, .table td { 
+     border-top: none !important; 
+ }
+
+ .caption {
+ 	font-weight: bold;
+ }
+
+ .big{
+ 	font: 20px Baskerville;
+ }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Mobile Ticket Viewer App</title>
+
+    {% assets "main.css" %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ ASSET_URL}}">
+    {% endassets %}
+
+
+    
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        
+ 
+        <div class="jumbotron">
+            <h1>Mobile Ticket Viewer</h1>
+            <p class="lead"></p>
+            </p>
+        </div>
+        
+        {% if isTkt %}
+        <div class="tkt big">
+        
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="caption">SUBJECT: </span>{{Tkt.Subject}}
+                        </td>
+                        <td>
+                            <span class="caption">Status: </span>{{Tkt.Status}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="caption">Posted: </span>{{Tkt.PostTime}}
+                        </td>
+                        <td>
+                            <span class="caption">Priority: </span>{{Tkt.Priority}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="caption">Updated:</span> {{Tkt.LastUpdateTime}}
+                        </td>
+                        <td>
+                            <span class="caption">Type:</span> {{Tkt.Type}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><span class="caption">Description:</span> {{Tkt.Description}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>       
+
+            <table class="table">        
+                <tbody>   
+                    <tr>
+                        <td><span class="caption"> Requester Name:</span> {{Tkt.SourceName}}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="caption">Requester Address:</span> {{Tkt.SourceAddress}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        {% endif %}
+
+        {% if not isTkt %}
+        <div class="alert alert-danger">
+            <strong>Oops!</strong> Error Occurred: {{Tkt.Error}}
+        </div>
+        {% endif %}
+
+        <footer class="footer top-buffer">
+            <a href='{{ url_for('index') }}' class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Back</a>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
