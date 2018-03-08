@@ -5,12 +5,12 @@ This is a Web Application developed using Flask in Python which can be used to v
 
 1. Clone this Repo to your local machine or Download as a zip file.
 2. Ensure you have python 3.6.4 and python -pip install
-3. In terminal Cd to the app folder
+3. In terminal cd to the root folder
 4. Install dependencies
 ```
 $ pip install -r requirements.txt
 ```
-4. Run the Application
+4. In terminal cd to the app folder and run the following command
 ```
 $ python Main.py
 ```
