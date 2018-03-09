@@ -19,8 +19,12 @@ $ python Main.py
 http://localhost:5000
 ```
 ## To Run the Test
-1. python test_Connector.py
-2. python test_DateParser.py
+```
+$ python test_Connector.py
+```
+```
+$ python test_DateParser.py
+```
 
 ## Design and Implementation
 **The project consists of following 4 Python Modules:**
