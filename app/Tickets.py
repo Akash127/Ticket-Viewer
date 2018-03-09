@@ -131,7 +131,7 @@ class DateParser:
 	    """
 
 		date = date = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%SZ')
-		str = "Date: {day}/{mon}/{yr} Time: {hr}:{min}:{sec}" \
+		str = "Date: {day}/{mon}/{yr} Time: {hr}:{min}:{sec} UTC" \
 		.format(day=date.day, mon=date.month, yr=date.year, hr=date.hour,min=date.minute,sec=date.second)
 
 		return str
